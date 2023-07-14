@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(./images/pattern-bg.svg),
+    url(./images/pattern-curve.svg), url(./images/pattern-quotes.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: left 90% center, top 100% left, left 20% top 25%;
+  background-size: 45%, 45%, 12%;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+
+  & .text {
+    width: 45vw;
+    position: relative;
+    left: 15%;
+    z-index: 1;
+
+    & .speech {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      color: hsl(240, 38%, 20%);
+      font-weight: 300;
+    }
+
+    & .name {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: hsl(240, 38%, 20%);
+      margin-top: 2rem;
+
+      & span {
+        color: hsl(240, 18%, 77%);
+        font-weight: 100;
+      }
+    }
+  }
+
+  & .image {
+    width: 35vw;
+    top: 18%;
+    left: 52%;
+    position: absolute;
+  }
+
+  & .image > img {
+    height: 100%;
+    width: 100%;
+  }
+
+  & .image {
+    & .slider {
+      position: absolute;
+      width: 6rem;
+      height: 3rem;
+      background-color: white;
+      top: 95%;
+      left: 12%;
+      border-radius: 2rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-shadow: 0px 5px 10px 5px hsl(240, 18%, 77%);
+      z-index: 5;
+
+      & > img {
+        width: 0.8rem;
+        height: 1.2rem;
+        position: relative;
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#john {
+  display: none;
+}
+
+#tanya {
+  display: flex;
+}
+
+@media (max-width: 1279px) {
+  main {
+    & .text {
+      & .name {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: hsl(240, 38%, 20%);
+        margin-top: 2rem;
+
+        & span {
+          color: hsl(240, 18%, 77%);
+          font-weight: 100;
+        }
+      }
+    }
+  }
+
+  span {
+    display: block;
+  }
+}
+
+@media (max-width: 1023px) {
+  body {
+    min-height: 100vh;
+    background-image: url(./images/pattern-bg.svg),
+      url(./images/pattern-curve.svg), url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left 90% top 30%, top 100% left, left 20% top 25%;
+    background-size: 45%, 45%, 12%;
+  }
+
+  main {
+    & .text {
+      & .name {
+        font-size: 1.3rem;
+        font-weight: 900;
+        color: hsl(240, 38%, 20%);
+        margin-top: 2rem;
+
+        & span {
+          color: hsl(240, 18%, 77%);
+          font-weight: 100;
+        }
+      }
+    }
+
+    & .image {
+      width: 35vw;
+      top: 20%;
+      position: absolute;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    min-height: 100vh;
+    background-image: url(./images/pattern-bg.svg),
+      url(./images/pattern-curve.svg), url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center top 10%, top 100% left, center top 73%;
+    background-size: 90%, 45%, 10%;
+  }
+
+  section {
+    min-height: 100vh;
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .text {
+      width: 90vw;
+      position: relative;
+      left: 0%;
+      z-index: 0;
+      order: 2;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      & .speech {
+        font-size: 2rem;
+        color: hsl(240, 38%, 20%);
+        line-height: 2.5rem;
+      }
+
+      & .name {
+        font-size: 1.3rem;
+        font-weight: 900;
+        color: hsl(240, 38%, 20%);
+        margin-top: 2rem;
+
+        & span {
+          color: hsl(240, 18%, 77%);
+          font-weight: 100;
+        }
+      }
+    }
+
+    & .image {
+      width: 70vw;
+      top: 0%;
+      left: 0%;
+      position: relative;
+      order: 1;
+      margin-top: 5rem;
+      margin-bottom: 7rem;
+    }
+
+    & .image > img {
+      height: 100%;
+      width: 100%;
+    }
+
+    & .image {
+      & .slider {
+        position: absolute;
+        width: 6rem;
+        height: 3rem;
+        background-color: white;
+        top: 95%;
+        left: 35%;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0px 5px 10px 5px hsl(240, 18%, 77%);
+        z-index: 5;
+
+        & > img {
+          width: 0.8rem;
+          height: 1.2rem;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  #john {
+    display: none;
+  }
+
+  #tanya {
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    min-height: 100vh;
+    background-image: url(./images/pattern-bg.svg),
+      url(./images/pattern-curve.svg), url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center top 10%, top 100% left, center top 67%;
+    background-size: 90%, 70%, 20%;
+  }
+
+  section {
+    min-height: 100vh;
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .text {
+      width: 90vw;
+      position: relative;
+      left: 0%;
+      z-index: 0;
+      order: 2;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      & .speech {
+        font-size: 1.5rem;
+        color: hsl(240, 38%, 20%);
+        line-height: 2rem;
+      }
+
+      & .name {
+        font-size: 1.3rem;
+        font-weight: 900;
+        color: hsl(240, 38%, 20%);
+        margin-top: 2rem;
+
+        & span {
+          color: hsl(240, 18%, 77%);
+          font-weight: 100;
+        }
+      }
+    }
+
+    & .image {
+      width: 70vw;
+      top: 0%;
+      left: 0%;
+      position: relative;
+      order: 1;
+      margin-top: 4rem;
+      margin-bottom: 7rem;
+    }
+
+    & .image > img {
+      height: 100%;
+      width: 100%;
+    }
+
+    & .image {
+      & .slider {
+        position: absolute;
+        width: 6rem;
+        height: 3rem;
+        background-color: white;
+        top: 90%;
+        left: 35%;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0px 5px 10px 5px hsl(240, 18%, 77%);
+        z-index: 5;
+
+        & > img {
+          width: 0.8rem;
+          height: 1.2rem;
+          position: relative;
+        }
+      }
+    }
+  }
+}
